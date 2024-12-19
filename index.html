@@ -1,1 +1,622 @@
-<html><head><base href="https://docs.google.com/spreadsheets/d/1-RVXr9sFxJOGmiHmTwqtLkFyykeBBBYPguaED58wVHQ/edit?usp=sharing"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#1a1a1a;color:#fff}.container{max-width:1200px;margin:0 auto;padding:20px;width:100%;position: relative;}.header{background:#2d2d2d;padding:30px;box-shadow:0 8px 25px rgba(0, 0, 0, 0.4);margin-bottom:30px;border-radius:15px}.header h1{text-align:center;margin-bottom:20px;color:#fff;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.3);transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);transform-origin: center;}.stats-container{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding:15px;background:rgba(0,0,0,.2);border-radius:10px;box-shadow:0 4px 15px rgba(0, 0, 0, 0.3)}.map-count,.area-map-count{color:#fff;font-size:14px}.category-count{color:#fff;font-size:14px}.recommendation{display: flex;align-items: center;justify-content: space-between;gap: 20px;background:#2d2d2d;padding:20px;border-radius:15px;margin:20px 0;box-shadow:0 8px 25px rgba(0, 0, 0, 0.4)}.recommendation-content{flex: 1;}.recommendation-animation{width: 100px;height: 100px;flex-shrink: 0;}.recommendation h3{color:#fff;margin-bottom:15px;text-transform:uppercase;text-shadow:1px 1px 3px rgba(0, 0, 0, 0.3);}.recommendation p{color:#ddd;line-height:1.6}.home-btn{position:static;display:none;padding:10px 20px;background:linear-gradient(135deg,#800208,#a8030a);border:none;border-radius:10px;color:#fff;cursor:pointer;box-shadow:0 6px 20px rgba(168, 3, 10, 0.3);transition:all .3s;margin-top:10px;margin-bottom:20px}.home-btn:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0, 0, 0, 0.4);background:linear-gradient(135deg,#a8030a,#800208)}.recent-reads{display:none;margin:20px 0;padding:20px;background:#2d2d2d;border-radius:15px;box-shadow:0 4px 15px rgba(0, 0, 0, 0.3)}.recent-reads h2{margin-bottom:15px;color:#fff}.recent-books{display:flex;gap:20px;overflow-x:auto;padding:10px 0}.recent-book{min-width:150px;background:#333;border-radius:10px;padding:10px;transition:transform .3s;cursor:pointer}.recent-book:hover{transform:scale(1.05)}.recent-book img{width:100%;height:200px;object-fit:cover;border-radius:8px}.recent-book h4{font-size:14px;margin-top:10px;color:#fff}.recent-book .map-category{display:block;font-size:12px;color:#888;margin-top:4px;}.search-container{display:flex;justify-content:center;margin:20px 0}.search-box{position:relative;width:80%;z-index:101;}.search-input{width:100%;padding:15px 20px;font-size:16px;border:2px solid #444;border-radius:30px;outline:none;transition:all .3s;background:#333;color:#fff;box-shadow:0 6px 20px rgba(0, 0, 0, 0.35);}.search-input:focus{border-color:#444;box-shadow:0 0 25px rgba(168, 3, 10, 0.3);}.search-icon{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:#888}.search-preview{position: absolute;bottom: 100%;left: 0;width: 100%;background:#333;border-radius:10px;box-shadow:0 -8px 25px rgba(0, 0, 0, 0.4);max-height:300px;overflow-y:auto;transform:none;display:none;z-index:100;margin-bottom: 5px;animation: slideFromBottom 0.2s ease-out;}.preview-item{padding:12px 20px;border-bottom:1px solid #444;cursor:pointer;transition:all .3s;display:flex;flex-direction:column;gap:4px;font-weight: normal;}.preview-item:first-child{border-top-left-radius:10px;border-top-right-radius:10px;}.preview-item:last-child{border-bottom:none;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}.tabs{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap;justify-content:center}.tab{padding:15px 25px !important;width: 100%; text-align: left !important; font-size: 16px !important; margin: 0; transition: all 0.3s;background: #1a1a1a; border: 1px solid #333; color: #fff; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);font-weight: normal;}.tab:hover,.tab.active{background:linear-gradient(135deg,#800208,#a8030a);color:#fff;box-shadow:0 6px 20px rgba(168, 3, 10, 0.4)}.tab[onclick*="displayAreas"] { background: linear-gradient(135deg,#a8030a,#800208) !important; color: #fff !important; box-shadow: 0 4px 12px rgba(168, 3, 10, .3) !important; }.maps-grid { display: flex; flex-direction: column; gap: 15px; padding: 20px; transition: opacity 0.4s ease-in-out, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); } .map-item { background: #2d2d2d; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; opacity: 0; transform: translateY(20px); transition: all 0.3s ease-out, opacity 0.5s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); } .map-item:hover { transform: translateX(10px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); } .map-item h3 { color: #fff; margin: 0; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); font-weight: normal; } .map-cover { display: none; } .iframe-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:1000}.iframe-container{position:fixed;top:0;left:0;width:100%;height:100%;background:#2d2d2d}.close-btn{position:fixed;top:15px;right:15px;background:linear-gradient(135deg,#800208,#a8030a);border:none;padding:8px 15px;border-radius:8px;cursor:pointer;color:#fff;z-index:1001;transition:all .3s;box-shadow:0 4px 15px rgba(0, 0, 0, 0.4)}.close-btn:hover{background:linear-gradient(135deg,#a8030a,#800208);box-shadow:0 4px 15px rgba(168, 3, 10, 0.4)}.home-content{display:none}.home-content{margin-top:20px;}.recommendation{margin-top:30px;}.area-map-count.highlight { animation: highlightText 1.5s ease-in-out; font-weight: bold; color: #c91f27; } @keyframes highlightText { 0% { transform: scale(1); color: #fff; } 50% { transform: scale(1.1); color: #c91f27; } 100% { transform: scale(1); color: #c91f27; } } @keyframes pulse-highlight { 0% { transform: scale(1); box-shadow: 0 4px 15px rgba(168, 3, 10, 0.2); opacity: 1; } 50% { transform: scale(1.02); box-shadow: 0 8px 25px rgba(168, 3, 10, 0.4); opacity: 1; } 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(168, 3, 10, 0.2); opacity: 1; } } .map-item.dimmed { opacity: 0.3; } .map-item.highlight { animation: pulse-highlight 1.5s ease-in-out infinite; background: linear-gradient(135deg, #2d2d2d, #3a3a3a); opacity: 1; z-index: 1; } .mode-tabs { display: none; } .fade-out { opacity: 0; transform: translateY(20px); } .fade-in { opacity: 1; transform: translateY(0); } @keyframes shakeError { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-10px); } 75% { transform: translateX(10px); } } @keyframes successPulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } } .password-input { width: 100%; padding: 15px; margin: 15px 0; border: 2px solid #444; border-radius: 10px; background: #1a1a1a; color: #fff; font-size: 16px; transition: all 0.3s ease; } .password-input.error { border-color: #ff4444; animation: shakeError 0.5s ease; } .password-input.success { border-color: #00ff00; animation: successPulse 0.5s ease; } .password-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 2000; padding: 15px; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); } .password-content { padding: 30px; border-radius: 20px; width: 90%; max-width: 400px; text-align: center; background: linear-gradient(145deg, #1a1a1a, #2d2d2d); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); } .password-content.error { animation: shakeModal 0.5s ease; background: linear-gradient(145deg, #2a1010, #3d1515); border: 1px solid rgba(255, 0, 0, 0.2); transition: all 0.3s ease; } @keyframes shakeModal { 0%, 100% { transform: translate(0, 0); } 25% { transform: translate(-10px, 0); } 75% { transform: translate(10px, 0); } } .subscriber-message { color: #fff; background: linear-gradient(135deg, rgba(168, 3, 10, 0.2), rgba(201, 31, 39, 0.2)); padding: 15px; border-radius: 10px; margin: 15px 0; border: 1px solid rgba(168, 3, 10, 0.3); font-weight: 500; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); box-shadow: 0 4px 15px rgba(168, 3, 10, 0.15); } @media (max-width: 480px) { .password-content { padding: 20px; width: 95%; } .password-content h3 { font-size: 20px !important; margin-bottom: 15px !important; } .password-content p { font-size: 14px !important; margin-bottom: 12px !important; } .password-input { padding: 12px !important; font-size: 14px !important; } .password-content button { padding: 10px 20px !important; font-size: 14px !important; } iframe[src*="lottie"] { width: 100px !important; height: 100px !important; margin: -10px auto 15px !important; } } @media (max-height: 700px) { .password-content { transform: scale(0.9); } } .premium-badge { position: fixed; top: 20px; right: 20px; background: linear-gradient(135deg, #ffd700, #daa520); padding: 5px 10px; border-radius: 15px; color: #fff; font-size: 12px; font-weight: bold; box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4); display: flex; align-items: center; gap: 5px; z-index: 1000; } .premium-badge i { color: #fff; font-size: 14px; } @media (max-width: 768px) {.search-box { width: 90%; }}.recent-book button { padding: 8px 20px; background: linear-gradient(135deg,#800208,#a8030a); border: none; border-radius: 8px; color: #fff; cursor: pointer; transition: all 0.3s; }.breadcrumb { color: #888; font-size: 12px; margin-top: 10px; text-align: left; padding: 0 10px; display: none; font-weight: normal; } .breadcrumb span { color: #ffd700; opacity: 0.7; } html { scroll-behavior: smooth; } body { scroll-padding-top: 20px; } @media (max-width: 768px) { .tabs { flex-direction: column; gap: 10px; width: 100%; padding: 0 10px; } .tab { width: 100%; padding: 15px 30px !important; text-align: left !important; font-size: 15px !important; margin: 0; } .tab { text-align: left !important; padding-left: 30px !important; } }.back-button-container .tab { font-size: 16px !important; padding: 15px 25px !important; margin-bottom: 10px; }</style></head><body><div class="container"><div style="text-align: left; font-size: 12px; color: #888; margin-bottom: 10px;" id="last-update"></div><button class="home-btn" onclick="showHome()"><i class="fas fa-home"></i> Início</button><div class="header"><h1>Biblioteca de Resumos</h1><div style="text-align: center; font-size: 12px; color: #888; margin-bottom: 15px;">Organize seus estudos com resumos</div><div style="text-align: center; margin-bottom: 20px;"><iframe src="https://lottie.host/embed/095bf163-fa2f-4de2-bc28-13d574a2f7e1/u7tVpWo8Lp.lottie" style="width: 150px; height: 150px; border: none;" frameborder="0"></iframe></div><div class="search-container"><div class="search-box"><input type="text" class="search-input" placeholder="Pesquisar resumos..."><i class="search-icon fas fa-search"></i></div></div><div class="breadcrumb"></div><div class="stats-container"><div class="map-count" id="map-count"></div><div class="category-count" id="category-count"></div><div class="area-map-count" id="area-map-count"></div></div></div><div class="tabs" id="tabs"></div><div id="home-content" class="home-content"><div class="recommendation"><div class="recommendation-content"><h3>REFLITA</h3><p id="daily-recommendation">Carregando recomendação...</p></div><iframe class="recommendation-animation" src="https://lottie.host/embed/727109e7-6fe0-44f8-8e93-d168b2f9f0c2/fi5yyQLYCL.lottie" frameborder="0"></iframe></div></div><div class="maps-grid" id="maps-grid"></div></div><div class="iframe-modal" id="iframe-modal"><div class="iframe-container"><button class="close-btn" onclick="closeModal()">Fechar</button><iframe id="map-iframe" width="100%" height="100%" frameborder="0"></iframe></div></div><script src="https://kit.fontawesome.com/a076d05399.js"></script><script>const USER_STORAGE_KEY = 'user_download_stats';const FREE_DOWNLOADS_LIMIT = 20;const isSubscriber = localStorage.getItem('isSubscriber') === 'true';let userStats = JSON.parse(localStorage.getItem(USER_STORAGE_KEY)) || { downloads: 0, lastReset: new Date().getTime() };let currentArea = '';let currentTheme = '';let areas = {};let themes = {};let files = {};function checkAndResetMonthlyCounts() { const now = new Date().getTime(); if (!userStats.lastReset || (now - userStats.lastReset) >= (30 * 24 * 60 * 60 * 1000)) { userStats = { downloads: 0, lastReset: now }; localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(userStats)); } }function getTotalSummariesCount() { let total = 0; for (const area in files) { if (files[area]) { for (const theme in files[area]) { if (Array.isArray(files[area][theme])) { total += files[area][theme].length; } } } } return total; }async function loadAreaData() { try { const SPREADSHEET_ID = '1G2AIuVUvMeCswpb9pd8TxaBf2LH_wDxf-egWakIwi7c'; const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}?key=${API_KEY}`); const data = await response.json(); const areaNames = data.sheets.map(sheet => sheet.properties.title); for (const area of areaNames) { const contentResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${area}?key=${API_KEY}`); const contentData = await contentResponse.json(); if (contentData.values) { const themeNames = contentData.values[0].filter((_, index) => index % 2 === 0); themes[area] = themeNames; files[area] = {}; themeNames.forEach((theme, themeIndex) => { const filesList = []; for (let i = 1; i < contentData.values.length; i++) { if (contentData.values[i][themeIndex * 2]) { filesList.push({ title: contentData.values[i][themeIndex * 2], link: contentData.values[i][themeIndex * 2 + 1] || '#' }); } } files[area][theme] = filesList; }); } } displayAreas(); updateMapCount(); } catch (error) { console.error('Error loading sheet data:', error); } } function displayAreas() { const tabsContainer = document.getElementById('tabs'); tabsContainer.innerHTML = ''; Object.keys(themes).forEach(area => { const tabButton = document.createElement('button'); tabButton.className = 'tab'; tabButton.textContent = area; tabButton.onclick = () => selectArea(area); tabsContainer.appendChild(tabButton); }); } function selectArea(area) { currentArea = area; currentTheme = ''; document.getElementById('home-content').style.display = 'none'; const breadcrumb = document.querySelector('.breadcrumb'); breadcrumb.style.display = 'block'; breadcrumb.textContent = `Você está em: ${area}`; const tabsContainer = document.getElementById('tabs'); tabsContainer.innerHTML = ''; const backButtonContainer = document.createElement('div'); backButtonContainer.className = 'back-button-container'; const backButton = document.createElement('button'); backButton.className = 'tab'; backButton.innerHTML = '<i class="fas fa-arrow-left"></i> Voltar'; backButton.onclick = () => { showHome(); displayAreas(); }; backButton.style.cssText = ` background: linear-gradient(135deg,#800208,#a8030a); color: #fff; font-weight: bold; box-shadow: 0 4px 12px rgba(168, 3, 10, .3); transform: scale(1.05); width: 100%; `; backButtonContainer.appendChild(backButton); tabsContainer.appendChild(backButtonContainer); const themeContainer = document.createElement('div'); themeContainer.style.cssText = ` display: flex; flex-direction: column; gap: 10px; width: 100%; `; themes[area].forEach(theme => { const themeButton = document.createElement('button'); themeButton.className = 'tab'; themeButton.textContent = theme; themeButton.onclick = () => selectTheme(theme); themeContainer.appendChild(themeButton); }); tabsContainer.appendChild(themeContainer); document.getElementById('maps-grid').innerHTML = ''; updateMapCount(); } function selectTheme(theme) { currentTheme = theme; const filesList = files[currentArea][theme]; displayMaps(filesList); const breadcrumb = document.querySelector('.breadcrumb'); breadcrumb.style.display = 'block'; breadcrumb.innerHTML = `Você está em: <span>${currentArea}</span> > <span>${theme}</span>`; document.querySelector('.header h1').textContent = 'Biblioteca de Resumos'; const mapsGrid = document.getElementById('maps-grid'); setTimeout(() => { mapsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); updateMapCount(); } function displayMaps(mapsList) { const grid = document.getElementById('maps-grid'); grid.style.display = 'flex'; grid.style.flexDirection = 'column'; grid.style.gap = '15px'; grid.innerHTML = ''; mapsList?.forEach((map, index) => { const title = map.title.replace('.pdf', ''); const item = document.createElement('div'); item.className = 'map-item'; item.setAttribute('data-map-id', index); item.style.cssText = ` background: #2d2d2d; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; opacity: 0; transform: translateY(20px); transition: all 0.3s ease-out ${index * 50}ms; `; item.innerHTML = ` <h3 style="color: #fff; margin: 0; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); font-weight: normal;">${title}</h3> <button onclick="checkPassword('${map.link}', '${title}', '')" style=" padding: 8px 20px; background: linear-gradient(135deg,#800208,#a8030a); color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s;">Download</button> `; grid.appendChild(item); requestAnimationFrame(() => { item.style.opacity = '1'; item.style.transform = 'translateY(0)'; }); }); } const API_KEY='AIzaSyCbD-rljbYoW1suOkyq8-ZA__BTtT7UCfU';const SPREADSHEET_ID='1hxXYVgEclEoXuwCRlVxyL57wxZ9PdpeWd2qBLKOCHII';let downloadMaps = {};const DOWNLOAD_SPREADSHEET_ID = '1NJSOtgvZE-ckuXX0JQEBaBctKSa5T02I_nZ8iQc8IGY';let currentMode = 'view';const maps={};let currentTab='';let sheets=[];let phrases=[];async function loadAccessPhrases() { const PHRASES_SPREADSHEET_ID = '1qIJtMbbCd75XpX3P7TBmZX7MqMxvTerXZkVnGCDWlcA'; try { const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${PHRASES_SPREADSHEET_ID}/values/nova!A:A?key=${API_KEY}`); const data = await response.json(); return data.values?.slice(1).map(row => row[0]) || []; } catch (error) { console.error('Error loading access phrases:', error); return []; } } function formatDate(date) { return date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' }); } function updateLastUpdateDate() { const lastUpdateElement = document.getElementById('last-update'); const now = new Date(); let lastUpdate = localStorage.getItem('lastUpdateDate'); if (!lastUpdate || (now - new Date(lastUpdate)) > (3 * 24 * 60 * 60 * 1000)) { lastUpdate = now.toISOString(); localStorage.setItem('lastUpdateDate', lastUpdate); } lastUpdateElement.textContent = `Última atualização: ${formatDate(new Date(lastUpdate))}`; } async function loadPhrases(){try{const response=await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/frases?key=${API_KEY}`);const data=await response.json();if(data.values){phrases=data.values.slice(1).map(row=>row[0])}}catch(error){console.error('Error loading phrases:',error)}}async function loadSheetData(){try{const readResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}?key=${API_KEY}`);const readData = await readResponse.json();sheets = readData.sheets;const downloadResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${DOWNLOAD_SPREADSHEET_ID}?key=${API_KEY}`);const downloadData = await downloadResponse.json();const tabsContainer=document.getElementById('tabs');tabsContainer.innerHTML='';sheets.forEach(sheet=>{if(sheet.properties.title.toLowerCase()!=='frases'){const tabButton=document.createElement('button');tabButton.className='tab';tabButton.textContent=sheet.properties.title;tabButton.onclick=()=>changeTab(sheet.properties.title);tabsContainer.appendChild(tabButton);loadSheetContent(sheet.properties.title);loadDownloadContent(sheet.properties.title);}});loadPhrases();showHome();}catch(error){console.error('Error loading spreadsheet:',error)}}async function loadDownloadContent(sheetName) { try { const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${DOWNLOAD_SPREADSHEET_ID}/values/${sheetName}?key=${API_KEY}`); const data = await response.json(); downloadMaps[sheetName] = data.values.slice(1).map(row => ({ title: row[0], link: row[1], cover: row[2] })); } catch (error) { console.error('Error loading download content:', error); } } function getDailyRecommendation(){if(phrases.length>0){const randomIndex=Math.floor(Math.random()*phrases.length);document.getElementById('daily-recommendation').textContent=phrases[randomIndex]}else{const recommendations=['Dedique pelo menos 30 minutos à leitura hoje para melhorar seu conhecimento jurídico.','A leitura diária é fundamental para se manter atualizado com as mudanças na legislação.','Experimente ler sobre uma área do direito diferente hoje para expandir seus horizontes.'];const randomIndex=Math.floor(Math.random()*recommendations.length);document.getElementById('daily-recommendation').textContent=recommendations[randomIndex]}}function showHome(){document.getElementById('home-content').style.display='block';document.getElementById('maps-grid').style.display='none';document.getElementById('tabs').style.display='flex';document.querySelector('.home-btn').style.display='none';document.querySelector('.breadcrumb').style.display='none';document.querySelector('.header h1').textContent = 'Biblioteca de Resumos';getDailyRecommendation()}function switchMode(mode) { const mainTitle = document.querySelector('.header h1'); const mapsGrid = document.getElementById('maps-grid'); const tabs = document.querySelectorAll('.mode-tab'); mapsGrid.classList.add('fade-out'); mainTitle.style.transform = 'scale(0.95)'; mainTitle.style.opacity = '0'; tabs.forEach(tab => { if (tab.dataset.mode === mode) { tab.classList.add('active'); tab.style.transform = 'scale(1.05)'; setTimeout(() => tab.style.transform = 'scale(1)', 200); } else { tab.classList.remove('active'); } }); setTimeout(() => { currentMode = mode; mainTitle.textContent = mode === 'view' ? 'Biblioteca de Resumos' : 'Biblioteca de Resumos'; if (mode === 'view') { if (currentTab) { displayMaps(maps[currentTab]); } else { showHome(); } } else { if (currentTab) { displayMaps(downloadMaps[currentTab]); } } requestAnimationFrame(() => { mainTitle.style.transform = 'scale(1)'; mainTitle.style.opacity = '1'; mapsGrid.classList.remove('fade-out'); mapsGrid.classList.add('fade-in'); }); }, 400); } function changeTab(tabName){currentTab=tabName;document.getElementById('home-content').style.display='none';document.getElementById('maps-grid').style.display='flex';document.getElementById('tabs').style.display='none';document.querySelector('.home-btn').style.display='inline-block'; const breadcrumb = document.querySelector('.breadcrumb'); breadcrumb.style.display = 'block'; breadcrumb.textContent = `Você está em: ${tabName}`; document.querySelectorAll('.tab').forEach(tab=>{tab.classList.toggle('active',tab.textContent===tabName)});const mapList = currentMode === 'view' ? maps[tabName] : downloadMaps[tabName];const areaMapCount = document.getElementById('area-map-count');areaMapCount.textContent = `Resumos nesta área: ${mapList?.length || 0}`;areaMapCount.classList.remove('highlight');void areaMapCount.offsetWidth; areaMapCount.classList.add('highlight'); displayMaps(mapList);}async function loadSheetContent(sheetName){try{const response=await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${sheetName}?key=${API_KEY}`);const data=await response.json();maps[sheetName]=data.values.slice(1).map(row=>({title:row[0],link:row[1],cover:row[2]}));updateMapCount();if(currentTab===sheetName){document.getElementById('area-map-count').textContent=`Resumos nesta área: ${maps[sheetName].length}`}}catch(error){console.error('Error loading sheet content:',error)}}function updateMapCount(){const totalMaps=getTotalSummariesCount();document.getElementById('map-count').textContent=`Total de Resumos: ${totalMaps}`}function checkPassword(link, title, cover) { if (localStorage.getItem('isSubscriber') === 'true') { window.open(link, '_blank'); return; } checkAndResetMonthlyCounts(); const modal = document.createElement('div'); modal.className = 'password-modal'; const content = document.createElement('div'); content.className = 'password-content'; const totalSummaries = getTotalSummariesCount(); const downloadsRemaining = FREE_DOWNLOADS_LIMIT - userStats.downloads; content.innerHTML = ` <div style="position: relative;"> <iframe src="https://lottie.host/embed/727109e7-6fe0-44f8-8e93-d168b2f9f0c2/fi5yyQLYCL.lottie" style="width: 120px; height: 120px; margin: -20px auto 20px;" frameborder="0"></iframe> <h3 style="color: #fff; font-size: 24px; margin-bottom: 20px;"> Downloads Disponíveis </h3> <p style="color: #ddd; margin-bottom: 15px; font-size: 16px;"> Você já utilizou ${userStats.downloads} de ${FREE_DOWNLOADS_LIMIT} downloads gratuitos este mês. </p> <p style="color: #ddd; margin-bottom: 25px; font-size: 16px;"> Restam ${downloadsRemaining} downloads gratuitos. </p> <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 25px;"> ${downloadsRemaining > 0 ? ` <button id="use-free" style=" padding: 12px 25px; background: #1a1a1a; border: 1px solid #333; color: #fff; cursor: pointer; transition: all 0.3s; ">Usar Download Gratuito</button> ` : ''} <p style="color: #888; margin: 10px 0;">- ou -</p> <div class="subscriber-message"> Coloque sua senha de assinante e tenha acesso ilimitado a ${totalSummaries} resumos! </div> <div> <input type="password" id="password-input" class="password-input" placeholder="Digite sua senha de assinante"> <button id="submit-password" style=" padding: 12px 25px; background: linear-gradient(135deg,#800208,#a8030a); border: none; border-radius: 10px; color: #fff; cursor: pointer; font-weight: bold; transition: all 0.3s; margin-top: 10px; width: 100%;">Acessar como Assinante</button> </div> <button id="cancel-password" style=" padding: 12px 25px; background: #1a1a1a; border: 1px solid #333; color: #fff; cursor: pointer; transition: all 0.3s; width: 100%;">Cancelar</button> </div> </div> `; modal.appendChild(content); document.body.appendChild(modal); if (downloadsRemaining > 0) { document.getElementById('use-free').onclick = () => { userStats.downloads++; localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(userStats)); document.body.removeChild(modal); window.open(link, '_blank'); }; } document.getElementById('submit-password').onclick = async () => { const password = document.getElementById('password-input').value; if (password === '3943') { localStorage.setItem('isSubscriber', 'true'); document.getElementById('password-input').classList.add('success'); content.classList.add('success'); content.innerHTML = ` <div style="position: relative; height: 300px;"> <iframe src="https://lottie.host/embed/fd754273-59e9-4631-b234-ff39f5fdd724/tby9Je8wnl.lottie" style="width: 200px; height: 200px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" frameborder="0"></iframe> </div> `; showPremiumBadge(); await new Promise(resolve => setTimeout(resolve, 2500)); document.body.removeChild(modal); window.open(link, '_blank'); } else { document.getElementById('password-input').classList.add('error'); content.classList.add('error'); content.style.background = 'linear-gradient(145deg, #2a1010, #3d1515)'; document.getElementById('password-input').value = ''; document.getElementById('password-input').placeholder = 'Senha incorreta!'; setTimeout(() => { document.getElementById('password-input').classList.remove('error'); content.classList.remove('error'); content.style.background = 'linear-gradient(145deg, #1a1a1a, #2d2d2d)'; document.getElementById('password-input').placeholder = 'Digite sua senha'; }, 1000); } }; document.getElementById('cancel-password').onclick = () => { document.body.removeChild(modal); }; document.getElementById('password-input').addEventListener('input', () => { document.getElementById('password-input').classList.remove('error', 'success'); content.classList.remove('error', 'success'); }); } function updateRecentReads(){ const recentContainer=document.getElementById('recent-books'); recentContainer.innerHTML=''; let recentItems = []; if (currentArea && currentTheme && files[currentArea] && files[currentArea][currentTheme]) { recentItems = files[currentArea][currentTheme].slice(0, 5); } recentItems.forEach(map => { const title = map.title.replace('.pdf', ''); const recentMap = document.createElement('div'); recentMap.className = 'recent-book'; recentMap.innerHTML=`<h4>${title}</h4><button onclick="window.open('${map.link}', '_blank')" style="padding: 8px 20px; background: linear-gradient(135deg,#800208,#a8030a); border: none; border-radius: 8px; color: #fff; cursor: pointer; transition: all 0.3s; margin-top: 10px;">Download</button>`; recentContainer.appendChild(recentMap)})} function openMap(link,title,cover){ const modal=document.getElementById('iframe-modal'); const iframe=document.getElementById('map-iframe'); const premiumBadge = document.querySelector('.premium-badge'); if (premiumBadge) { premiumBadge.style.display = 'none'; } document.querySelector('.home-btn').style.display = 'none'; iframe.src=link; modal.style.display='block'; } function closeModal(){ const modal = document.getElementById('iframe-modal'); const iframe = document.getElementById('map-iframe'); const homeBtn = document.querySelector('.home-btn'); const premiumBadge = document.querySelector('.premium-badge'); iframe.src=''; modal.style.display='none'; homeBtn.style.display='inline-block'; if (premiumBadge && localStorage.getItem('isSubscriber') === 'true') { premiumBadge.style.display = 'flex'; } } function normalizeText(text) { let normalized = text.replace(/^\d+\s*/, ''); normalized = normalized.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim(); return normalized; } document.querySelector('.search-input').addEventListener('input', e => { const searchTerm = normalizeText(e.target.value); const searchBox = document.querySelector('.search-box'); const existingPreview = document.querySelector('.search-preview'); if (existingPreview) { existingPreview.remove(); } if (searchTerm === '') { if (currentTab) { displayMaps(maps[currentTab]); document.getElementById('tabs').style.display = 'none'; document.querySelector('.home-btn').style.display = 'inline-block'; document.getElementById('home-content').style.display = 'none'; } else { document.getElementById('maps-grid').style.display = 'none'; document.getElementById('home-content').style.display = 'block'; document.getElementById('tabs').style.display = 'flex'; document.querySelector('.home-btn').style.display = 'none'; } return; } document.querySelector('.home-btn').style.display = 'inline-block'; document.getElementById('home-content').style.display = 'none'; const previewContainer = document.createElement('div'); previewContainer.className = 'search-preview'; const allMatches = []; const sourceMaps = currentMode === 'view' ? maps : downloadMaps; Object.entries(sourceMaps).forEach(([category, categoryMaps]) => { categoryMaps.forEach(map => { const normalizedTitle = normalizeText(map.title); const searchTerms = searchTerm.split(' '); const isMatch = searchTerms.every(term => { return normalizedTitle.includes(term) || normalizedTitle.replace(/[aá]/g, '[aá]').replace(/[eé]/g, '[eé]').replace(/[ií]/g, '[ií]').replace(/[oó]/g, '[oó]').replace(/[uú]/g, '[uú]').includes(term); }); if (isMatch) { allMatches.push({...map, category}); } }); }); allMatches.slice(0, 5).forEach(map => { const previewItem = document.createElement('div'); previewItem.className = 'preview-item'; previewItem.innerHTML = `<div>${map.title}</div><small style="color: #888;">${map.category}</small>`; previewItem.onclick = () => { const searchPreview = document.querySelector('.search-preview'); if (searchPreview) searchPreview.remove(); document.querySelector('.search-input').value = ''; displayMaps(allMatches); setTimeout(() => { const mapItems = document.querySelectorAll('.map-item'); mapItems.forEach((item, index) => { if (index === allMatches.findIndex(m => m.title === map.title)) { item.scrollIntoView({ behavior: 'smooth', block: 'center' }); mapItems.forEach(otherItem => { if (otherItem !== item) { otherItem.classList.add('dimmed'); } }); item.classList.add('highlight'); setTimeout(() => { mapItems.forEach(otherItem => { otherItem.classList.remove('dimmed'); }); item.classList.remove('highlight'); }, 3000); } }); }); }; previewContainer.appendChild(previewItem); }); if (allMatches.length > 0) { previewContainer.style.display = 'block'; searchBox.appendChild(previewContainer); } document.getElementById('maps-grid').style.display = 'flex'; document.getElementById('home-content').style.display = 'none'; displayMaps(allMatches); }); loadSheetData(); getDailyRecommendation(); updateLastUpdateDate(); window.onload = function() { loadAreaData(); getDailyRecommendation(); updateLastUpdateDate(); if (localStorage.getItem('isSubscriber') === 'true') { showPremiumBadge(); } };function showPremiumBadge() { if (localStorage.getItem('isSubscriber') === 'true') { const badge = document.createElement('div'); badge.className = 'premium-badge'; badge.innerHTML = ` <i class="fas fa-crown"></i> Premium `; document.body.appendChild(badge); } }</script></body></html>
+<html><head><base href="https://docs.google.com/spreadsheets/d/1-RVXr9sFxJOGmiHmTwqtLkFyykeBBBYPguaED58wVHQ/edit?usp=sharing"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#121212;color:#fff}.container{max-width:1200px;margin:0 auto;padding:10px;width:98%;position: relative;background: #1a1a1a;border-radius: 15px;margin-top: 10px;box-shadow: 0 4px 15px rgba(0,0,0,0.3)}.header{background:#2d2d2d;padding:20px 10px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,.3)}.header h1{font-size:clamp(24px, 4vw, 32px);margin-bottom:20px;text-align: center}.stats-container{text-align:left;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;padding:20px;margin:20px 0}.map-count,.area-map-count{color:#fff;font-size:14px}.category-count{color:#fff;font-size:14px}.recommendation{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;background:#2d2d2d;padding:20px;border-radius:15px;margin:20px 0;box-shadow:0 4px 15px rgba(0,0,0,.3);flex-direction:column;text-align:left}.recommendation-content{flex:1;text-align:left}.recommendation-animation{width:100px;height:100px;flex-shrink:0}.recommendation h3{color:#fff;margin-bottom:15px;text-transform:uppercase}.recommendation p{color:#ddd;line-height:1.6}.home-btn{position:static;display:none;padding:10px 20px;background:linear-gradient(135deg,#a8030a,#c91f27);border:none;border-radius:10px;color:#fff;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,.3);transition:all .3s;margin-top:10px;margin-bottom:20px}.home-btn:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.4);background:linear-gradient(135deg,#c91f27,#a8030a)}.recent-reads{margin:20px 0;padding:20px;background:#2d2d2d;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.3)}.recent-reads h2{margin-bottom:15px;color:#fff;text-align:left}.recent-books{display:flex;gap:20px;overflow-x:auto;padding:10px 0}.recent-book{min-width:200px;background:#2d2d2d;border-radius:10px;padding:15px;transition:transform .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,.3);text-align:left}.recent-book:hover{transform:translateY(-5px)}.recent-book img{width:100%;height:200px;object-fit:cover;border-radius:8px}.recent-book h4{font-size:14px;margin-top:10px;color:#fff}.recent-book .map-category{display:block;font-size:12px;color:#DAA520 !important;margin-top:4px;font-weight:bold}.map-grid{display:flex;flex-direction:column;gap:15px;padding:20px;transition:opacity 0.4s ease-in-out,transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)}.map-item{background:#2d2d2d;padding:12px 10px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;opacity:0;transform:translateY(20px);transition:all 0.3s ease-out}.map-item:hover{transform:translateX(10px);box-shadow:0 6px 20px rgba(0, 0, 0, 0.4)}.iframe-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:1000}.iframe-container{position:fixed;top:0;left:0;width:100%;height:100%;background:#2d2d2d;text-align:center}.close-btn{position:fixed;top:15px;right:15px;background:linear-gradient(135deg,#a8030a,#c91f27);border:none;padding:8px 15px;border-radius:8px;cursor:pointer;color:#fff;z-index:1001;transition:all .3s}.close-btn:hover{background:linear-gradient(135deg,#c91f27,#a8030a);box-shadow:0 4px 12px rgba(168, 3, 10, .3)}.home-content{display:none}.home-content{margin-top:20px}.recommendation{margin-top:30px}.area-map-count.highlight{animation:highlightText 1.5s ease-in-out;font-weight:bold;color:#c91f27}@keyframes highlightText{0%{transform:scale(1);color:#fff}50%{transform:scale(1.1);color:#c91f27}100%{transform:scale(1);color:#c91f27}}.mode-tabs{display:none}.fade-out{opacity:0;transform:translateY(20px)}.fade-in{opacity:1;transform:translateY(0)}@keyframes shakeError{0%,100%{transform:translateX(0)}25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}@keyframes successPulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}.password-input{width:100%;padding:15px;margin:15px 0;border:2px solid #444;border-radius:10px;background:#1a1a1a;color:#fff;font-size:16px;transition:all 0.3s}.password-input.error{border-color:#ff4444;animation:shakeError 0.5s ease}.password-input.success{border-color:#00ff00;animation:successPulse 0.5s ease}.password-modal{background:rgba(0,0,0,0.95);backdrop-filter:blur(5px);animation:none}.password-content{background:linear-gradient(145deg,#2d2d2d,#222);box-shadow:0 8px 32px rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s ease;text-align:center}.password-content.error{animation:shakeError 0.5s ease;box-shadow:0 0 20px rgba(255,0,0,0.5);border:1px solid #ff4444}.password-content.success{animation:successPulse 0.5s ease;box-shadow:0 0 20px rgba(0,255,0,0.5);border:1px solid #00ff00}.premium-badge{position:fixed;top:20px;right:20px;background:linear-gradient(135deg,#DAA520,#FFD700);padding:5px 10px;border-radius:15px;color:#333;font-size:12px;font-weight:bold;box-shadow:0 2px 4px rgba(0,0,0,0.1);display:flex;align-items:center;gap:5px;z-index:1000;opacity:0.8}.premium-badge i{color:#333;font-size:12px}.download-btn{padding:12px 25px;background:linear-gradient(135deg,#a8030a,#c91f27);border:none;border-radius:25px;color:#fff;cursor:pointer;font-weight:600;display:flex;align-items:center;gap:10px;transition:all 0.3s;box-shadow:0 4px 15px rgba(168, 3, 10, 0.3)}.download-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(168, 3, 10, 0.4);background:linear-gradient(135deg,#c91f27,#a8030a)}.menu-item{background:#2d2d2d;padding:15px 20px;border-radius:12px;cursor:pointer;transition:all 0.3s;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 15px rgba(0,0,0,0.2);margin-bottom:8px;gap:15px;text-align:left}@media (max-width:768px){.menu-level{padding:15px 10px;margin-bottom:15px}.menu-item{padding:12px 15px;margin-bottom:8px;display:flex;flex-direction:column;text-align:center;gap:10px}.download-btn{padding:10px 20px;font-size:14px}.back-btn{padding:10px 15px;margin-bottom:10px}.grid-container{grid-template-columns:1fr;padding:5px}.header h1{font-size:24px}.stats-container{flex-direction:column;gap:10px;text-align:center}}.navigation-menu{width:100%;max-width:1200px;margin:0 auto;padding:20px}.menu-level{background:#1a1a1a;border-radius:15px;padding:15px 10px;margin-bottom:15px;box-shadow:0 4px 15px rgba(0,0,0,0.4)}.menu-level h2{color:#fff;margin-bottom:20px;font-size:24px;padding-bottom:10px;border-bottom:2px solid rgba(255,255,255,0.1);text-align:center}.grid-container{display:grid;grid-template-columns:1fr;gap:15px;margin-top:20px;padding:10px;}.menu-item{background:#2d2d2d;padding:15px 20px;border-radius:12px;cursor:pointer;transition:all 0.3s;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 15px rgba(0,0,0,0.2);margin-bottom:8px;flex-wrap:wrap;gap:10px;text-align:left}.menu-item:hover{transform:translateX(10px);background:#363636}.menu-item h3{color:#fff;font-size:16px;margin:0;flex:1}.download-btn{padding:12px 25px;min-width:120px;text-align:center;white-space:nowrap}.back-btn{padding:12px 25px;background:linear-gradient(135deg,#a8030a,#c91f27);border:none;border-radius:25px;color:#fff;cursor:pointer;font-weight:600;display:flex;align-items:center;gap:10px;transition:all 0.3s;box-shadow:0 4px 15px rgba(168, 3, 10, 0.3);margin-bottom:20px}.back-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(168, 3, 10, 0.4);background:linear-gradient(135deg,#c91f27,#a8030a}.back-btn i{font-size:16px;} .search-container { margin: 20px 0; } .search-box { position: relative; max-width: 600px; margin: 0 auto; } .search-input { width: 100%; padding: 15px 20px; border: 2px solid #444; border-radius: 12px; background: #1a1a1a; color: #fff; font-size: 16px; transition: all 0.3s ease; } .search-input:focus { border-color: #c91f27; outline: none; box-shadow: 0 0 0 3px rgba(201, 31, 39, 0.2); transform: translateY(-1px); } .search-preview { position: absolute; top: calc(100% + 5px); left: 0; right: 0; background: #2d2d2d; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); margin-top: 5px; max-height: 350px; overflow-y: auto; z-index: 100; border: 1px solid rgba(255,255,255,0.1); } .preview-item { padding: 15px; cursor: pointer; transition: all 0.3s ease; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; } .preview-item:hover { background: #363636; transform: translateX(5px); } .preview-item:last-child { border-bottom: none; } .search-loading { text-align: center; padding: 20px; color: #888; } .search-loading::after { content: ''; display: inline-block; width: 20px; height: 20px; border: 2px solid #888; border-radius: 50%; border-top-color: transparent; animation: spin 0.8s linear infinite; } @keyframes spin { to { transform: rotate(360deg); } } </style></head><body><div class="container"><div style="text-align: left; font-size: 12px; color: #888; margin-bottom: 10px;" id="last-update"></div><button class="home-btn" onclick="showHome()"><i class="fas fa-home"></i> In&#xed;cio</button><div class="header"><h1>Biblioteca de Resumos</h1><div style="text-align: left; font-size: 12px; color: #888; margin-bottom: 15px;">Organize seus estudos com resumos</div><div style="display: flex; justify-content: center; margin-bottom: 20px;"><iframe src="https://lottie.host/embed/f52200f4-676a-421f-bb05-8d81200d7fb7/czxSqolgCi.lottie" style="width: 200px; height: 200px; border: none;" frameborder="0"></iframe></div><div class="stats-container"><div class="map-count" id="map-count"></div><div class="category-count" id="category-count"></div><div class="area-map-count" id="area-map-count"></div></div><div class="search-container"><div class="search-box"><input type="text" class="search-input" placeholder="Pesquisar resumos..." style="width: 100%; padding: 12px 20px; border: 2px solid #444; border-radius: 10px; background: #1a1a1a; color: #fff; font-size: 16px; transition: all 0.3s"></div></div></div><div class="navigation-menu"><div id="menu-1" class="menu-level"><h2>&#xc1;reas do Direito</h2><div id="areas-grid" class="grid-container"></div></div><div id="menu-2" class="menu-level" style="display:none"><button class="back-btn" onclick="backToAreas()"><i class="fas fa-arrow-left"></i> Voltar</button><h2 id="selected-area"></h2><div id="topics-grid" class="grid-container"></div></div><div id="menu-3" class="menu-level" style="display:none"><button class="back-btn" onclick="backToTopics()"><i class="fas fa-arrow-left"></i> Voltar</button><h2 id="selected-topic"></h2><div id="files-grid" class="grid-container"></div></div></div><div id="home-content" class="home-content"><div class="recommendation"><div class="recommendation-content"><h3>REFLITA</h3><p id="daily-recommendation">Carregando recomenda&#xe7;&#xe3;o...</p></div><iframe class="recommendation-animation" src="https://lottie.host/embed/727109e7-6fe0-44f8-8e93-d168b2f9f0c2/fi5yyQLYCL.lottie" frameborder="0"></iframe></div><div class="recent-reads" id="recent-reads-section"><h2>Resumos Mais Baixados</h2><div class="recent-books" id="recent-books"></div></div></div><div class="maps-grid" id="maps-grid"></div></div><div class="iframe-modal" id="iframe-modal"><div class="iframe-container"><button class="close-btn" onclick="closeModal()">Fechar</button><iframe id="map-iframe" width="100%" height="100%" frameborder="0"></iframe></div></div><script src="https://kit.fontawesome.com/a076d05399.js"></script><script>const USER_STORAGE_KEY = 'user_download_stats';
+const DOWNLOAD_STATS_KEY = 'download_stats';
+let downloadStats = JSON.parse(localStorage.getItem(DOWNLOAD_STATS_KEY) || '{}');
+const isSubscriber = localStorage.getItem('isSubscriber') === 'true';
+let userStats = JSON.parse(localStorage.getItem(USER_STORAGE_KEY)) || {
+  downloads: 0,
+  lastReset: new Date().getTime()
+};
+function checkAndResetMonthlyCounts() {
+  const now = new Date().getTime();
+  const thirtyDays = 30 * 24 * 60 * 60 * 1000;
+  if (now - userStats.lastReset > thirtyDays) {
+    userStats = {
+      downloads: 0,
+      lastReset: now
+    };
+    localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(userStats));
+  }
+}
+const API_KEY = 'AIzaSyCbD-rljbYoW1suOkyq8-ZA__BTtT7UCfU';
+const SPREADSHEET_ID = '1G2AIuVUvMeCswpb9pd8TxaBf2LH_wDxf-egWakIwi7c';
+let downloadMaps = {};
+const DOWNLOAD_SPREADSHEET_ID = '1NJSOtgvZE-ckuXX0JQEBaBctKSa5T02I_nZ8iQc8IGY';
+let currentMode = 'view';
+const maps = {};
+let currentTab = '';
+let sheets = [];
+let phrases = [];
+const recentReads = JSON.parse(localStorage.getItem('recentReads')) || [];
+async function loadAccessPhrases() {
+  const PHRASES_SPREADSHEET_ID = '1qIJtMbbCd75XpX3P7TBmZX7MqMxvTerXZkVnGCDWlcA';
+  try {
+    const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${PHRASES_SPREADSHEET_ID}/values/nova!A:A?key=${API_KEY}`);
+    const data = await response.json();
+    return data.values?.slice(1).map(row => row[0]) || [];
+  } catch (error) {
+    console.error('Error loading access phrases:', error);
+    return [];
+  }
+}
+function formatDate(date) {
+  return date.toLocaleDateString('pt-BR', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
+}
+function updateLastUpdateDate() {
+  const lastUpdateElement = document.getElementById('last-update');
+  const now = new Date();
+  let lastUpdate = localStorage.getItem('lastUpdateDate');
+  if (!lastUpdate || now - new Date(lastUpdate) > 3 * 24 * 60 * 60 * 1000) {
+    lastUpdate = now.toISOString();
+    localStorage.setItem('lastUpdateDate', lastUpdate);
+  }
+  lastUpdateElement.textContent = `Última atualização: ${formatDate(new Date(lastUpdate))}`;
+}
+async function loadPhrases() {
+  try {
+    const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/frases?key=${API_KEY}`);
+    const data = await response.json();
+    if (data.values) {
+      phrases = data.values.slice(1).map(row => row[0]);
+    }
+  } catch (error) {
+    console.error('Error loading phrases:', error);
+  }
+}
+function getDailyRecommendation() {
+  if (phrases.length > 0) {
+    const randomIndex = Math.floor(Math.random() * phrases.length);
+    document.getElementById('daily-recommendation').textContent = phrases[randomIndex];
+  } else {
+    const recommendations = ['Dedique pelo menos 30 minutos à leitura hoje para melhorar seu conhecimento jurídico.', 'A leitura diária é fundamental para se manter atualizado com as mudanças na legislação.', 'Experimente ler sobre uma área do direito diferente hoje para expandir seus horizontes.'];
+    const randomIndex = Math.floor(Math.random() * recommendations.length);
+    document.getElementById('daily-recommendation').textContent = recommendations[randomIndex];
+  }
+}
+async function loadSheetData() {
+  try {
+    const readResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}?key=${API_KEY}`);
+    const readData = await readResponse.json();
+    sheets = readData.sheets;
+    loadPhrases();
+    showHome();
+  } catch (error) {
+    console.error('Error loading spreadsheet:', error);
+  }
+}
+async function loadDownloadContent(sheetName) {
+  try {
+    const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${DOWNLOAD_SPREADSHEET_ID}/values/${sheetName}?key=${API_KEY}`);
+    const data = await response.json();
+    downloadMaps[sheetName] = data.values.slice(1).map(row => ({
+      title: row[0],
+      link: row[1],
+      cover: row[2]
+    }));
+  } catch (error) {
+    console.error('Error loading download content:', error);
+  }
+}
+function showHome() {
+  document.getElementById('home-content').style.display = 'block';
+  document.getElementById('maps-grid').style.display = 'none';
+  document.getElementById('recent-reads-section').style.display = 'block';
+  document.querySelector('.home-btn').style.display = 'none';
+  getDailyRecommendation();
+}
+function switchMode(mode) {
+  const mainTitle = document.querySelector('.header h1');
+  const mapsGrid = document.getElementById('maps-grid');
+  const tabs = document.querySelectorAll('.mode-tab');
+  mapsGrid.classList.add('fade-out');
+  mainTitle.style.transform = 'scale(0.95)';
+  mainTitle.style.opacity = '0';
+  tabs.forEach(tab => {
+    if (tab.dataset.mode === mode) {
+      tab.classList.add('active');
+      tab.style.transform = 'scale(1.05)';
+      setTimeout(() => tab.style.transform = 'scale(1)', 200);
+    } else {
+      tab.classList.remove('active');
+    }
+  });
+  setTimeout(() => {
+    currentMode = mode;
+    mainTitle.textContent = mode === 'view' ? 'Biblioteca de Resumos' : 'Download de Resumos';
+    if (mode === 'view') {
+      if (currentTab) {
+        displayMaps(maps[currentTab]);
+      } else {
+        showHome();
+      }
+    } else {
+      if (currentTab) {
+        displayMaps(downloadMaps[currentTab]);
+      }
+    }
+    requestAnimationFrame(() => {
+      mainTitle.style.transform = 'scale(1)';
+      mainTitle.style.opacity = '1';
+      mapsGrid.classList.remove('fade-out');
+      mapsGrid.classList.add('fade-in');
+    });
+  }, 400);
+}
+function changeTab(tabName) {
+  currentTab = tabName;
+  document.getElementById('home-content').style.display = 'none';
+  document.getElementById('maps-grid').style.display = 'flex';
+  document.getElementById('recent-reads-section').style.display = 'none';
+  document.querySelector('.home-btn').style.display = 'inline-block';
+  const mapList = currentMode === 'view' ? maps[tabName] : downloadMaps[tabName];
+  const areaMapCount = document.getElementById('area-map-count');
+  areaMapCount.textContent = `Resumos nesta área: ${mapList?.length || 0}`;
+  areaMapCount.classList.remove('highlight');
+  void areaMapCount.offsetWidth;
+  areaMapCount.classList.add('highlight');
+  displayMaps(mapList);
+}
+async function loadSheetContent(sheetName) {
+  try {
+    const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${sheetName}?key=${API_KEY}`);
+    const data = await response.json();
+    maps[sheetName] = data.values.slice(1).map(row => ({
+      title: row[0],
+      link: row[1],
+      cover: row[2]
+    }));
+    updateMapCount();
+    if (currentTab === sheetName) {
+      document.getElementById('area-map-count').textContent = `Resumos nesta área: ${maps[sheetName].length}`;
+    }
+  } catch (error) {
+    console.error('Error loading sheet content:', error);
+  }
+}
+function updateMapCount() {
+  const totalMaps = Object.values(maps).reduce((total, categoryMaps) => total + categoryMaps.length, 0);
+  document.getElementById('map-count').textContent = `Total de Resumos: ${totalMaps}`;
+}
+function checkPassword(link, title, cover) {
+  if (localStorage.getItem('isSubscriber') === 'true') {
+    window.open(link, '_blank');
+    return;
+  }
+  checkAndResetMonthlyCounts();
+  if (userStats.downloads >= 15) {
+    showPasswordModal(link, title, cover);
+  } else {
+    userStats.downloads++;
+    localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(userStats));
+    window.open(link, '_blank');
+  }
+}
+function handleDownload(link, title, cover) {
+  if (!downloadStats[link]) {
+    downloadStats[link] = {
+      title: title,
+      count: 0
+    };
+  }
+  downloadStats[link].count++;
+  localStorage.setItem(DOWNLOAD_STATS_KEY, JSON.stringify(downloadStats));
+  const premiumBadge = document.querySelector('.premium-badge');
+  if (premiumBadge) {
+    premiumBadge.style.display = 'none';
+  }
+  if (localStorage.getItem('isSubscriber') === 'true') {
+    window.open(link, '_blank');
+    return;
+  }
+  checkAndResetMonthlyCounts();
+  if (userStats.downloads >= 15) {
+    showPasswordModal(link, title, cover);
+  } else {
+    userStats.downloads++;
+    localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(userStats));
+    window.open(link, '_blank');
+  }
+}
+function showPasswordModal(link, title, cover) {
+  const modal = document.createElement('div');
+  modal.className = 'password-modal';
+  modal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  `;
+  const content = document.createElement('div');
+  content.className = 'password-content';
+  content.style.cssText = `
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  `;
+  content.innerHTML = `
+    <div style="position: relative;">
+      <iframe src="https://lottie.host/embed/727109e7-6fe0-44f8-8e93-d168b2f9f0c2/fi5yyQLYCL.lottie" style="width: 120px; height: 120px; margin: -20px auto 20px;" frameborder="0"></iframe>
+      <h3 style="color: #fff; font-size: 24px; margin-bottom: 20px;">Acesso Exclusivo</h3>
+      <p style="color: #ddd; margin-bottom: 25px; font-size: 16px;">Digite sua senha de assinante:</p>
+      <input type="password" id="password-input" class="password-input" placeholder="Digite sua senha">
+      <div style="display: flex; gap: 10px; margin-top: 25px; justify-content: center;">
+        <button id="submit-password" style="
+          padding: 12px 25px;
+          background: linear-gradient(135deg,#a8030a,#c91f27);
+          border: none;
+          border-radius: 10px;
+          color: #fff;
+          cursor: pointer;
+          font-weight: bold;
+          transition: all 0.3s;">Acessar</button>
+        <button id="cancel-password" style="
+          padding: 12px 25px;
+          background: #444;
+          border: none;
+          border-radius: 10px;
+          color: #fff;
+          cursor: pointer;
+          transition: all 0.3s;">Cancelar</button>
+      </div>
+    </div>
+  `;
+  modal.appendChild(content);
+  document.body.appendChild(modal);
+  const passwordInput = document.getElementById('password-input');
+  document.getElementById('submit-password').onclick = async () => {
+    const password = passwordInput.value;
+    if (password === '3943') {
+      passwordInput.classList.add('success');
+      content.classList.add('success');
+      content.innerHTML = `
+        <div style="position: relative; height: 300px;">
+          <iframe src="https://lottie.host/embed/fd754273-59e9-4631-b234-ff39f5fdd724/tby9Je8wnl.lottie" style="width: 200px; height: 200px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" frameborder="0"></iframe>
+        </div>
+      `;
+      localStorage.setItem('isSubscriber', 'true');
+      showPremiumBadge();
+      await new Promise(resolve => setTimeout(resolve, 2500));
+      document.body.removeChild(modal);
+      window.open(link, '_blank');
+    } else {
+      passwordInput.classList.add('error');
+      content.classList.add('error');
+      passwordInput.value = '';
+      passwordInput.placeholder = 'Senha incorreta!';
+      setTimeout(() => {
+        passwordInput.classList.remove('error');
+        content.classList.remove('error');
+        passwordInput.placeholder = 'Digite sua senha';
+      }, 1000);
+    }
+  };
+  document.getElementById('cancel-password').onclick = () => {
+    document.body.removeChild(modal);
+  };
+  passwordInput.addEventListener('input', () => {
+    passwordInput.classList.remove('error', 'success');
+    content.classList.remove('error', 'success');
+  });
+}
+function displayMaps(mapsList) {
+  const grid = document.getElementById('maps-grid');
+  grid.style.display = 'flex';
+  grid.style.flexDirection = 'column';
+  grid.style.gap = '15px';
+  grid.innerHTML = '';
+  mapsList?.forEach((map, index) => {
+    const formattedTitle = map.title.replace('.pdf', '').replace(/(\\d+)/g, '<strong>$1</strong>');
+    const item = document.createElement('div');
+    item.className = 'map-item';
+    item.style.cssText = ` background: #2d2d2d; padding: 12px 10px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; opacity: 0; transform: translateY(20px); transition: all 0.3s ease-out ${index * 50}ms; `;
+    item.innerHTML = ` <h3 style="color: #fff; margin: 0;">${formattedTitle}</h3> <button onclick="checkPassword('${map.link}','${map.title}','')" class="download-btn" style="padding: 8px 20px;">Download</button> `;
+    grid.appendChild(item);
+    requestAnimationFrame(() => {
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
+    });
+  });
+}
+function updateRecentReads() {
+  const recentContainer = document.getElementById('recent-books');
+  recentContainer.innerHTML = '';
+  const sortedDownloads = Object.entries(downloadStats).map(([link, data]) => ({
+    link,
+    title: data.title,
+    count: data.count
+  })).sort((a, b) => b.count - a.count).slice(0, 5);
+  const recentTitle = document.querySelector('.recent-reads h2');
+  recentTitle.textContent = 'Resumos Mais Baixados';
+  sortedDownloads.forEach(item => {
+    const formattedTitle = item.title.replace('.pdf', '').replace(/(\\d+)/g, '<strong>$1</strong>');
+    const recentMap = document.createElement('div');
+    recentMap.className = 'recent-book';
+    recentMap.innerHTML = `<h4>${formattedTitle}</h4><small class="map-category">${item.count} downloads</small><button onclick="handleDownload('${item.link}', '${item.title}', '')" class="download-btn" style="padding: 8px 20px;">Download</button>`;
+    recentContainer.appendChild(recentMap);
+  });
+}
+function openMap(link, title, cover) {
+  const modal = document.getElementById('iframe-modal');
+  const iframe = document.getElementById('map-iframe');
+  const premiumBadge = document.querySelector('.premium-badge');
+  if (premiumBadge) {
+    premiumBadge.style.display = 'none';
+  }
+  document.querySelector('.home-btn').style.display = 'none';
+  iframe.src = link;
+  modal.style.display = 'block';
+  let mapCategory = '';
+  for (const category in maps) {
+    if (maps[category].some(m => m.link === link)) {
+      mapCategory = category;
+      break;
+    }
+  }
+  const mapData = {
+    title,
+    link,
+    cover,
+    category: mapCategory,
+    timestamp: Date.now()
+  };
+  const existingIndex = recentReads.findIndex(map => map.link === link);
+  if (existingIndex > -1) {
+    recentReads.splice(existingIndex, 1);
+  }
+  recentReads.unshift(mapData);
+  if (recentReads.length > 5) {
+    recentReads.pop();
+  }
+  localStorage.setItem('recentReads', JSON.stringify(recentReads));
+  updateRecentReads();
+}
+function closeModal() {
+  const modal = document.getElementById('iframe-modal');
+  const iframe = document.getElementById('map-iframe');
+  const homeBtn = document.querySelector('.home-btn');
+  const premiumBadge = document.querySelector('.premium-badge');
+  iframe.src = '';
+  modal.style.display = 'none';
+  homeBtn.style.display = 'inline-block';
+  if (premiumBadge && localStorage.getItem('isSubscriber') === 'true') {
+    premiumBadge.style.display = 'flex';
+  }
+}
+document.querySelectorAll('.search-input').forEach(input => {
+  input.addEventListener('input', e => {
+    const searchTerm = e.target.value;
+    const searchBox = e.target.closest('.search-box');
+    const searchMode = e.target.dataset.mode;
+    const existingPreview = searchBox.querySelector('.search-preview');
+    if (existingPreview) {
+      existingPreview.remove();
+    }
+    if (searchTerm === '') {
+      document.getElementById('maps-grid').style.display = 'none';
+      document.getElementById('home-content').style.display = 'block';
+      document.querySelector('.home-btn').style.display = 'none';
+      return;
+    }
+    document.querySelector('.home-btn').style.display = 'inline-block';
+    const previewContainer = document.createElement('div');
+    previewContainer.className = 'search-preview';
+    const allMatches = [];
+    const sourceMaps = searchMode === 'view' ? maps : downloadMaps;
+    Object.entries(sourceMaps).forEach(([category, categoryMaps]) => {
+      categoryMaps.forEach(map => {
+        const normalizedTitle = map.title;
+        if (normalizedTitle.includes(searchTerm)) {
+          allMatches.push({
+            ...map,
+            category
+          });
+        }
+      });
+    });
+    allMatches.sort((a, b) => {
+      const titleA = a.title;
+      const titleB = b.title;
+      return titleA.indexOf(searchTerm) - titleB.indexOf(searchTerm);
+    });
+    allMatches.slice(0, 5).forEach(map => {
+      const formattedTitle = map.title.replace('.pdf', '').replace(/(\d+)/g, '<strong>$1</strong>');
+      const previewItem = document.createElement('div');
+      previewItem.className = 'preview-item';
+      previewItem.innerHTML = `<div style='display: flex; flex-direction: column; gap: 4px;'><div style='font-weight: 500; color: #fff;'>${formattedTitle}</div><small style='color: #DAA520; font-size: 11px;'>${map.category}</small></div>`;
+      previewItem.onclick = () => {
+        checkPassword(map.link, map.title, map.cover);
+      };
+      previewContainer.appendChild(previewItem);
+    });
+    if (allMatches.length > 0) {
+      previewContainer.style.display = 'block';
+      searchBox.appendChild(previewContainer);
+    }
+    document.getElementById('maps-grid').style.display = 'flex';
+    document.getElementById('home-content').style.display = 'none';
+    displayMaps(allMatches);
+  });
+});
+loadSheetData();
+updateRecentReads();
+getDailyRecommendation();
+updateLastUpdateDate();
+document.addEventListener('DOMContentLoaded', () => {
+  showPremiumBadge();
+});
+function showPremiumBadge() {
+  if (localStorage.getItem('isSubscriber') === 'true') {
+    const badge = document.createElement('div');
+    badge.className = 'premium-badge';
+    badge.innerHTML = ` <i class="fas fa-crown"></i> Premium `;
+    document.body.appendChild(badge);
+  }
+}
+async function loadMenuData() {
+  try {
+    const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}?key=${API_KEY}`);
+    const data = await response.json();
+    const areasGrid = document.getElementById('areas-grid');
+    areasGrid.innerHTML = '';
+    data.sheets.forEach(sheet => {
+      if (sheet.properties.title.toLowerCase() !== 'frases') {
+        const areaItem = document.createElement('div');
+        areaItem.className = 'menu-item';
+        areaItem.innerHTML = `<h3>${sheet.properties.title}</h3>`;
+        areaItem.onclick = () => selectArea(sheet.properties.title);
+        areasGrid.appendChild(areaItem);
+      }
+    });
+  } catch (error) {
+    console.error('Error loading menu data:', error);
+  }
+}
+async function selectArea(area) {
+  currentArea = area;
+  document.getElementById('menu-1').style.display = 'none';
+  document.getElementById('menu-2').style.display = 'block';
+  document.getElementById('selected-area').textContent = area;
+  try {
+    const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${area}?key=${API_KEY}`);
+    const data = await response.json();
+    const topics = new Set();
+    if (data.values && data.values.length > 0) {
+      data.values[0].forEach((header, index) => {
+        if (index % 2 === 0) {
+          topics.add(header);
+        }
+      });
+    }
+    const topicsGrid = document.getElementById('topics-grid');
+    topicsGrid.innerHTML = '';
+    topics.forEach(topic => {
+      const topicItem = document.createElement('div');
+      topicItem.className = 'menu-item';
+      topicItem.innerHTML = `<h3>${topic}</h3>`;
+      topicItem.onclick = () => selectTopic(topic);
+      topicsGrid.appendChild(topicItem);
+    });
+  } catch (error) {
+    console.error('Error loading topics:', error);
+  }
+}
+async function selectTopic(topic) {
+  currentTopic = topic;
+  document.getElementById('menu-2').style.display = 'none';
+  document.getElementById('menu-3').style.display = 'block';
+  document.getElementById('selected-topic').textContent = topic;
+  try {
+    const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${currentArea}?key=${API_KEY}`);
+    const data = await response.json();
+    const filesGrid = document.getElementById('files-grid');
+    filesGrid.innerHTML = '';
+    const topicColIndex = data.values[0].findIndex(header => header === topic);
+    if (topicColIndex >= 0) {
+      data.values.slice(1).forEach(row => {
+        if (row[topicColIndex]) {
+          const fileItem = document.createElement('div');
+          fileItem.className = 'menu-item';
+          const fileName = row[topicColIndex].replace('.pdf', '').replace(/(\d+)/g, '<strong>$1</strong>');
+          fileItem.innerHTML = `<h3>${fileName}</h3><button onclick="checkPassword('${row[topicColIndex + 1]}', '${row[topicColIndex]}', '')" class="download-btn"><i class="fas fa-download"></i> Download</button>`;
+          filesGrid.appendChild(fileItem);
+        }
+      });
+    }
+  } catch (error) {
+    console.error('Error loading files:', error);
+  }
+}
+function backToAreas() {
+  document.getElementById('menu-1').style.display = 'block';
+  document.getElementById('menu-2').style.display = 'none';
+  currentArea = '';
+}
+function backToTopics() {
+  document.getElementById('menu-2').style.display = 'block';
+  document.getElementById('menu-3').style.display = 'none';
+  currentTopic = '';
+}
+window.onload = function () {
+  loadMenuData();
+  updateLastUpdateDate();
+  showPremiumBadge();
+};
+function normalizeText(text) {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\d+/g, '').toLowerCase().trim();
+}
+function handleSearch(searchTerm) {
+  const searchBox = document.querySelector('.search-box');
+  const existingPreview = searchBox.querySelector('.search-preview');
+  if (existingPreview) {
+    existingPreview.remove();
+  }
+  if (!searchTerm.trim()) {
+    return;
+  }
+  const previewContainer = document.createElement('div');
+  previewContainer.className = 'search-preview';
+  const loading = document.createElement('div');
+  loading.className = 'search-loading';
+  loading.textContent = 'Buscando...';
+  previewContainer.appendChild(loading);
+  searchBox.appendChild(previewContainer);
+  clearTimeout(window.searchTimeout);
+  window.searchTimeout = setTimeout(() => {
+    const normalizedSearch = normalizeText(searchTerm);
+    const allMatches = [];
+    Object.entries(maps).forEach(([category, categoryMaps]) => {
+      categoryMaps.forEach(map => {
+        const normalizedTitle = normalizeText(map.title);
+        if (normalizedTitle.includes(normalizedSearch)) {
+          allMatches.push({
+            ...map,
+            category,
+            normalizedTitle
+          });
+        }
+      });
+    });
+    allMatches.sort((a, b) => {
+      const indexA = a.normalizedTitle.indexOf(normalizedSearch);
+      const indexB = b.normalizedTitle.indexOf(normalizedSearch);
+      return indexA - indexB;
+    });
+    previewContainer.innerHTML = '';
+    if (allMatches.length === 0) {
+      previewContainer.innerHTML = `<div class="preview-item" style="text-align: center; color: #888;">Nenhum resultado encontrado</div>`;
+      return;
+    }
+    allMatches.slice(0, 6).forEach(map => {
+      const previewItem = document.createElement('div');
+      previewItem.className = 'preview-item';
+      const formattedTitle = map.title.replace('.pdf', '').replace(/(\d+)/g, '<strong>$1</strong>');
+      previewItem.innerHTML = `<div style="flex: 1"><div style="font-weight: 500; color: #fff; margin-bottom: 4px">${formattedTitle}</div><div style="display: flex; gap: 10px; align-items: center"><small style="color: #DAA520; font-size: 12px">${map.category}</small></div></div><button class="download-btn" style="padding: 8px 15px; font-size: 14px">Download</button>`;
+      previewItem.onclick = () => {
+        checkPassword(map.link, map.title, map.cover);
+        previewContainer.remove();
+      };
+      previewContainer.appendChild(previewItem);
+    });
+  }, 300);
+}
+document.querySelector('.search-input').addEventListener('input', e => {
+  handleSearch(e.target.value);
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-box')) {
+    const preview = document.querySelector('.search-preview');
+    if (preview) {
+      preview.remove();
+    }
+  }
+});</script></body></html>
